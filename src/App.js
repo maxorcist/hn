@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import {useState} from "react";
 import Search from "./components/Search/Search";
@@ -9,7 +8,6 @@ function App() {
     return (
         <div className="App">
             <header className="App__Header">
-                {/*<img src={logo} className="App-logo" alt="logo" />*/}
                 <button onClick={() => setPage("search")}>Search</button>
                 <button onClick={() => setPage("fave")}>Fave List</button>
             </header>

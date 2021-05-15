@@ -1,10 +1,14 @@
 import MovieCard from "../MovieCard/MovieCard";
 
-const CardList = () => {
+const CardList = ({ items }) => {
 
     return (
         <div>
-            <MovieCard />
+            {items?.length &&
+                items.map((item, i) => (
+                   <MovieCard {...item} key={i} />
+                ))
+            }
         </div>
     )
 }

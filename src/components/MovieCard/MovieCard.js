@@ -1,14 +1,17 @@
-const MovieCard = () => {
+const MovieCard = ({ Poster }) => {
+
     return (
         <img
             style={{
-                width: "100px",
-                height: "100px"
+                // width: "100px",
+                height: "200px",
+                marginRight: "20px",
+                marginBottom: "10px"
             }}
-            src="https://m.media-amazon.com/images/M/MV5BNjM0NTc0NzItM2FlYS00YzEwLWE0YmUtNTA2ZWIzODc2OTgxXkEyXkFqcGdeQXVyNTgwNzIyNzg@._V1_SX300.jpg"
+            src={Poster}
             alt="poster"
         />
     )
-}
+};
 
 export default MovieCard;

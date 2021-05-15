@@ -1,6 +1,7 @@
 import {useEffect, useState} from "react";
 import {get, getSearch} from "../../utils/httpGet";
 import {getDummyData} from "../../utils/dummyData";
+import CardList from "../CardList/CardList";
 
 const Search = () => {
     const [input, setInput] = useState("");
@@ -26,10 +27,12 @@ const Search = () => {
                 </label>
                 <button type="submit">go</button>
             </form>
-            {searchResult && <p>{JSON.stringify(searchResult)}</p>}
+            {searchResult &&
+                <CardList items={searchResult.Search} />
+            }
             {error && <p>{error} hej</p>}
         </div>
     )
-}
+};
 
 export default Search;

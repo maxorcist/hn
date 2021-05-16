@@ -1,15 +1,25 @@
 import MovieCard from "../MovieCard/MovieCard";
 import MovieDetail from "../MovieDetail/MovieDetail";
+import {useState} from "react";
 
-const CardList = ({ items }) => {
+const CardList = ({items}) => {
+    const [movie, showMovieDetail] = useState();
 
     return (
         <div>
-            <MovieDetail {...items[0]} />
+            {movie && <MovieDetail
+                {...movie}
+                handleClose={() => showMovieDetail(null)}
+            />
+            }
             {items?.length &&
-                items.map((item, i) => (
-                   <MovieCard {...item} key={i} />
-                ))
+            items.map((item, i) => (
+                <MovieCard
+                    {...item}
+                    handleClick={() => showMovieDetail(item)}
+                    key={i}
+                />
+            ))
             }
         </div>
     )

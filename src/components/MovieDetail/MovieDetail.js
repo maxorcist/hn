@@ -1,8 +1,11 @@
 import "./MovieDetail.css";
 
-const MovieDetail = ({Poster, Title, Type, Year, imdbID}) => {
+const MovieDetail = ({Poster, Title, Type, Year, imdbID, handleClose}) => {
     return (
-        <div className="MovieDetail">
+        <div
+            className="MovieDetail"
+            onClick={handleClose}
+        >
             <img
                 className="MovieDetail__Poster"
                 src={Poster}

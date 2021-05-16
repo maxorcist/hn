@@ -1,4 +1,4 @@
-const MovieCard = ({ Poster }) => {
+const MovieCard = ({ Poster, handleClick }) => {
 
     return (
         <img
@@ -10,6 +10,7 @@ const MovieCard = ({ Poster }) => {
             }}
             src={Poster}
             alt="poster"
+            onClick={handleClick}
         />
     )
 };

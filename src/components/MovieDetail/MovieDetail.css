@@ -1,4 +1,9 @@
 .MovieDetail {
+    position: fixed;
+    top: 0; bottom: 0;
+    width: 100%;
+    padding: 10vh 0;
+    background-color: rgba(241,243,244,0.9);
     display: flex;
     flex-direction: column;
     text-align: center;

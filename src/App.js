@@ -8,8 +8,16 @@ function App() {
     return (
         <div className="App">
             <header className="App__Header">
-                <button onClick={() => setPage("search")}>Search</button>
-                <button onClick={() => setPage("fave")}>Fave List</button>
+                <button
+                    className="App__MenuButton"
+                    onClick={() => setPage("search")}>
+                    Search
+                </button>
+                <button
+                    className="App__MenuButton"
+                    onClick={() => setPage("fave")}>
+                    Favorites
+                </button>
             </header>
             {page === "search" &&
                 <Search />

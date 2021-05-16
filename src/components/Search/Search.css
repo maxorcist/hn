@@ -1,0 +1,10 @@
+.Search__Form {
+    margin: 8px 0 32px;
+}
+
+.Search__Label {
+    font-weight: bold;
+}
+.Search__Input {
+    margin: 0 8px;
+}

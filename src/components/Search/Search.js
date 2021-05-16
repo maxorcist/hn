@@ -1,5 +1,5 @@
-import {useEffect, useState} from "react";
-import {get, getSearch} from "../../utils/httpGet";
+import "./Search.css";
+import {useState} from "react";
 import {getDummyData} from "../../utils/dummyData";
 import CardList from "../CardList/CardList";
 
@@ -16,16 +16,19 @@ const Search = () => {
     }
     return (
         <div>
-            <form onSubmit={handleSubmit}>
-                <label>
+            <form className="Search__Form" onSubmit={handleSubmit}>
+                <label className="Search__Label">
                     Search
                     <input
+                        className="Search__Input"
                         type="text"
                         value={input}
                         onChange={e => setInput(e.target.value)}
                     />
                 </label>
-                <button type="submit">go</button>
+                <button
+                    className="Search__Submit"
+                    type="submit">Go!</button>
             </form>
             {searchResult &&
                 <CardList items={searchResult.Search} />

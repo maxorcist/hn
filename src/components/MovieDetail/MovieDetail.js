@@ -1,6 +1,21 @@
 import "./MovieDetail.css";
+import {removeFromStorage, saveToStorage, storageContains} from "../../utils/localStorage";
 
-const MovieDetail = ({Poster, Title, Type, Year, imdbID, handleClose}) => {
+const MovieDetail = ( props ) => {
+    const {
+        Poster,
+        Title,
+        Type,
+        Year,
+        imdbID,
+        handleClose
+    } = props;
+
+    const isSaved = storageContains(imdbID);
+    const toggleSave = () => {
+        isSaved ? removeFromStorage(imdbID) : saveToStorage(props);
+    }
+
     return (
         <div
             className="MovieDetail"
@@ -15,7 +30,14 @@ const MovieDetail = ({Poster, Title, Type, Year, imdbID, handleClose}) => {
                 <h3 className="MovieDetail__Type">{Type}</h3>
                 <h3 className="MovieDetail__Year">{Year}</h3>
                 <p className="MovieDetail__ID">{imdbID}</p>
-                <button className="MovieDetail__Fave">Add to favorites</button>
+                <button
+                    onClick={toggleSave}
+                    className="MovieDetail__Fave">
+                    {!isSaved ?
+                        "Add to favorites"
+                        : "Remove from favorites"
+                    }
+                </button>
             </div>
         </div>
     )

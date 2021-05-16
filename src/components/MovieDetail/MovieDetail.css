@@ -1,0 +1,26 @@
+.MovieDetail {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.MovieDetail__Poster {
+    object-fit: cover;
+    width: 100%;
+    height: 250px;
+}
+.MovieDetail__Details {
+    min-width: 400px;
+}
+
+@media screen and (min-width: 600px) {
+    .MovieDetail {
+        flex-flow: row wrap;
+        justify-content: center;
+        text-align: left;
+    }
+    .MovieDetail__Poster {
+        max-width: 200px;
+        height: 100%;
+        margin-right: 20px;
+    }
+}

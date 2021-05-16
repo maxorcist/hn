@@ -1,4 +1,12 @@
-# Getting Started with Create React App
+# Description
+
+Fetches movies from http://www.omdbapi.com/ through searching. Movies can be added to a favorite list to be viewed later.
+
+## Add api key to .env
+
+Open .env and add your omdbapi.com api key to REACT_APP_API_KEY
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

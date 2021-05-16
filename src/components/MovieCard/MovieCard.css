@@ -1,0 +1,8 @@
+.MovieCard {
+    display: inline-block;
+}
+.MovieCard__Image {
+    height: 200px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}

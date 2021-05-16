@@ -12,8 +12,10 @@ const Fave = () => {
 
     return (
         <div className="Fave">
-            {favorites?.length &&
+            {favorites?.length ?
                 <CardList items={favorites} onChange={setOnChange} />
+                :
+                <h2>You have no saved favorites</h2>
             }
         </div>
     )

@@ -1,7 +1,7 @@
 import "./Search.css";
 import {useState} from "react";
-import {getDummyData} from "../../utils/dummyData";
 import CardList from "../CardList/CardList";
+import {getSearch} from "../../utils/httpGet";
 
 const Search = () => {
     const [input, setInput] = useState("");
@@ -10,8 +10,7 @@ const Search = () => {
     const handleSubmit = (evt) => {
         evt.preventDefault()
         if (input) {
-            // getSearch(input).then(setSearchResult).catch(setError)
-            setSearchResult(getDummyData())
+            getSearch(input).then(setSearchResult).catch(setError)
         }
     }
     return (

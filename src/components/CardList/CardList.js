@@ -2,7 +2,7 @@ import MovieCard from "../MovieCard/MovieCard";
 import MovieDetail from "../MovieDetail/MovieDetail";
 import {useState} from "react";
 
-const CardList = ({items}) => {
+const CardList = ({items, onChange = ()=>{} }) => {
     const [movie, showMovieDetail] = useState();
 
     return (
@@ -10,6 +10,7 @@ const CardList = ({items}) => {
             {movie && <MovieDetail
                 {...movie}
                 handleClose={() => showMovieDetail(null)}
+                onChange={onChange}
             />
             }
             {items?.length &&

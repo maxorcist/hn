@@ -8,12 +8,14 @@ const MovieDetail = ( props ) => {
         Type,
         Year,
         imdbID,
-        handleClose
+        handleClose,
+        onChange,
     } = props;
 
     const isSaved = storageContains(imdbID);
     const toggleSave = () => {
         isSaved ? removeFromStorage(imdbID) : saveToStorage(props);
+        onChange(imdbID);
     }
 
     return (

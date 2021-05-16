@@ -25,4 +25,4 @@ const removeFromStorage = ( imdbID ) => {
     localStorage.setItem(store, JSON.stringify(rest))
 }
 
-export { saveToStorage, storageContains, removeFromStorage }
+export { getStorage, saveToStorage, storageContains, removeFromStorage }

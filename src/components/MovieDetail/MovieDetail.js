@@ -29,9 +29,9 @@ const MovieDetail = ( props ) => {
                 alt="poster"/>
             <div className="MovieDetail__Details">
                 <h2 className="MovieDetail__Title">{Title}</h2>
-                <h3 className="MovieDetail__Type">{Type}</h3>
-                <h3 className="MovieDetail__Year">{Year}</h3>
-                <p className="MovieDetail__ID">{imdbID}</p>
+                <h3 className="MovieDetail__Type">Type: {Type}</h3>
+                <h3 className="MovieDetail__Year">Release: {Year}</h3>
+                <p className="MovieDetail__ID">imdb ID: {imdbID}</p>
                 <button
                     onClick={toggleSave}
                     className="MovieDetail__Fave">
